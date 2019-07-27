@@ -28,4 +28,4 @@ export const osConfig = $stateProvider => {
     });
 };
 
-osConfig.$inject = ["$stateProvider"];
+osConfig.$inject = ["$stateProvider", "$urlRouterProvider"];

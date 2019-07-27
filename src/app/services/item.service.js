@@ -3,7 +3,7 @@ import { runInThisContext } from "vm";
 export default class ItemService {
   constructor($http) {
     this.http = $http;
-    this.url = "http://localhost:3000/itens";
+    this.url = "https://lavanderiadeize.herokuapp.com/itens";
   }
 
   findByPesquisa(pesquisa) {
@@ -41,7 +41,7 @@ export default class ItemService {
   }
 
   remove(id) {
-    return this.http.delite(this.url + "/" + id).then(function(response) {
+    return this.http.delete(this.url + "/" + id).then(function(response) {
       return response.data;
     });
   }
